@@ -4,6 +4,8 @@ import NavBar from "@/src/components/sections/NavBar";
 import About from "@/src/components/sections/About";
 import TreatmentMenu from "@/src/components/sections/TreatmentMenu";
 import Testimonials from "@/src/components/sections/Testimonials";
+import Local from "../components/sections/Local";
+import Horarios from "../components/sections/Horarios";
 import Footer from "@/src/components/sections/Footer";
 
 
@@ -23,6 +25,12 @@ export default function Home() {
 
       {/* 5. Prova Social (Depoimentos) */}
       <Testimonials />
+
+      {/* Seção de Localização */}
+      <Local />
+
+      {/* Seção de Horários */}
+      <Horarios />
       
       {/* 6. Rodapé (Informações Técnicas/Localização) */}
       <Footer />
