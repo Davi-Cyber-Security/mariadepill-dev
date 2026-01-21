@@ -11,7 +11,9 @@ import Footer from "@/src/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col">
+    
+    <main className="flex min-h-screen flex-col pt-20">
+      {/*Coloquei um padding ai no topo como medida temporaria. Vai q eu descobru outra parada em um futuro a frente*/}
       {/* 1. NavBar (Impacto) */}
       <NavBar />
       {/* 2. Seção Principal (Impacto) */}
