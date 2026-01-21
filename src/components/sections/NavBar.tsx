@@ -29,8 +29,8 @@ export default function NavBar() {
             <Image src={IconeWhatsapp} alt="Icone do Whatsapp" className={"icone"}/>
               Fale Conosco
             </Link>
-            <div className={"modo-escuro"} onClick={() => setAlterarModoParaRoxo(!alterarModoParaRoxo)}>
-              <BiAdjust style={alterarModoParaRoxo ? {color: '#AA6BC8'} : {color: '#463E70'}}/>
+            <div className={"modo-escuro efeito-pointer"} onClick={() => setAlterarModoParaRoxo(!alterarModoParaRoxo)}>
+              <BiAdjust style={alterarModoParaRoxo ? {color: '#AA6BC8'} : {color: '#463E70'}} className="botaoModo"/>
             </div>
           </div>
         </div>
