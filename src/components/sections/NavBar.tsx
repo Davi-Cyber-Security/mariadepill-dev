@@ -2,8 +2,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import IconeWhatsapp from '../../../public/icone-whatsapp.png';
+import { BiAdjust } from "react-icons/bi";
+import { useState } from "react";
 
 export default function NavBar() {
+  const [alterarModoParaRoxo, setAlterarModoParaRoxo] = useState(false);
+  
     return (
       <header>
         <div className={"background-white"}>
@@ -25,7 +29,9 @@ export default function NavBar() {
             <Image src={IconeWhatsapp} alt="Icone do Whatsapp" className={"icone"}/>
               Fale Conosco
             </Link>
-            
+            <div className={"modo-escuro"} onClick={() => setAlterarModoParaRoxo(!alterarModoParaRoxo)}>
+              <BiAdjust style={alterarModoParaRoxo ? {color: '#AA6BC8'} : {color: '#463E70'}}/>
+            </div>
           </div>
         </div>
       </header>
