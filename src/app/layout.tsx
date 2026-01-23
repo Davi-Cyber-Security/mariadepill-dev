@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Questrial, Lato  } from "next/font/google";
+import { Playfair_Display, Questrial, Lato,  Konkhmer_Sleokchher } from "next/font/google";
 import "./globals.css";
 
 
@@ -19,6 +19,12 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif", 
 });
+const konkhmer = Konkhmer_Sleokchher({ 
+  subsets: ["latin"],
+  variable: "--font-serif", 
+  weight: "400",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -26,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className="{`${playfair.variable} ${questrial.variable} ${lato.variable}`}">
+      <body className="{`${playfair.variable} ${questrial.variable} ${lato.variable} ${konkhmer.variable}`}">
         {children}
       </body>
     </html>

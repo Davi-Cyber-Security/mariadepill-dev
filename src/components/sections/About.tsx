@@ -10,7 +10,7 @@ export default function About(){
                 <h2 className="text-6xl mb-6 text-text-principal font-playfair-display">Resultados duradouros e uma<br/>experiência inesquecivel</h2>
                 <p className="text-4xl mb-12 text-text-secundario font-lato">Comprometimento com a<br/>excelência e um atendimento<br/>de qualidade superior.</p>
                 
-                <Link href={"#linkwhatsapp"} className="font-questrial inline-block text-center text-[32px] justify-center bg-botao-principal rounded-[50px] txt-white px-6">
+                <Link href={"#linkwhatsapp"} className="font-questrial inline-block text-center text-[32px] justify-center bg-botao-principal rounded-[50px] txt-white px-6 hover:bg-[#3b3654] transition-colors">
                     Mande uma mensagem
                 </Link>
             </div>

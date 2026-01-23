@@ -22,7 +22,7 @@ export default function NavBar() {
 
   return (
     <nav className="fixed top-2 inset-x-0 z-50 flex justify-center px-2">
-      <div className=" w-full flex items-center justify-between bg-offwhite shadow-lg rounded-2xl">
+      <div className=" w-full flex items-center justify-between bg-offwhite shadow-lg rounded-full">
         {/*To sem a imagem da logo que ta feita la no figma então coloquei o icone do zapzap para testar a parada*/}
         <Image className="flex bg-principal m-1 rounded-full w-14 h-14" src={IconeWhatsapp} alt="Logo" />
         
@@ -30,7 +30,7 @@ export default function NavBar() {
         {/*Adicionar essa parada aqui como className scroll-mt-28; serve para quando utilizar o link na navbar, não bloquear o titulo da sesão com a nav*/}
          {navLinks.map((link) => (
           <li key={link.href}>
-              <Link href={link.href} className="hover:text-purple-600 transition-colors">
+              <Link href={link.href} className="hover:text-purple-600 transition-colors font-konkhmer">
                 {link.label}
               </Link>
           </li>

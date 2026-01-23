@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import imagem from "@/public/Imagem.svg"
 import { useState, useEffect } from "react";
 
 export default function Testimonials(){
@@ -17,7 +18,7 @@ export default function Testimonials(){
                     
                     <div className="paleta-decoration">
                         <div className="paleta-decoration-rotation-190deg">
-                            <Image src={""} alt="Maria Depill" className="imagem-mariadepill"/>
+                            <Image src={imagem} alt="Maria Depill" className="imagem-mariadepill"/>
                         </div>
                     </div>
                 </div>
