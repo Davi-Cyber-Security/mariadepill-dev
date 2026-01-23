@@ -26,7 +26,7 @@ export default function NavBar() {
         {/*To sem a imagem da logo que ta feita la no figma então coloquei o icone do zapzap para testar a parada*/}
         <Image className="flex bg-principal m-1 rounded-full w-14 h-14" src={IconeWhatsapp} alt="Logo" />
         
-        <ul className="hidden md:flex text-principal absolute left-1/2 -translate-x-1/2 gap-6 list-none items-center font-medium">
+        <ul className="hidden lg:flex text-principal absolute left-1/2 -translate-x-1/2 gap-6 list-none items-center font-medium">
         {/*Adicionar essa parada aqui como className scroll-mt-28; serve para quando utilizar o link na navbar, não bloquear o titulo da sesão com a nav*/}
          {navLinks.map((link) => (
           <li key={link.href}>
@@ -44,7 +44,7 @@ export default function NavBar() {
                     elementos não necessario no modo acessibilidade.
                     E o aria-label é o nome de um elemento da interface.
                 */}
-               <span className="hidden lg:inline">Fale Conosco</span>     
+               <span>Fale Conosco</span>     
           </Link>
           <BiAdjust 
             aria-label="Alternar modo de cor"

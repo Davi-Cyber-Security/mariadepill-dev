@@ -43,7 +43,11 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-principal: oklch(0.3962 0.0829 289.4);
+  --color-text-principal: #463E70;
+  --color-text-secundario: #6F66AD;
+  --color-botao-principal: #463E70;
   --color-offwhite: #FAF8FC;
+  --drop-shadow-sombra-padrao: 0px 4px 10px rgba(0, 0, 0, 25%);
 }
 
 :root {
