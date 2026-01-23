@@ -177,3 +177,8 @@
 .efeito-pointer:hover{
   cursor: pointer;
 }
+
+.icone {
+  height: 64px;
+  width: 64px;
+}
