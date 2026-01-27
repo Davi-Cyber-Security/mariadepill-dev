@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function About(){
+export default function  About(){
     return (
         <div className={"container"}> 
             <div className={"container-aboud"}>
