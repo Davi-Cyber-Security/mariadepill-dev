@@ -1,412 +1,216 @@
-const Cabeca = [
-    Rosto = [
-        titulo=[
-            {
-                id: 1,
-                titulo: 'Depilação do Rosto',
-                descricao: 'Realce sua beleza natural com uma pele iluminada e uniforme.'
-            }
-        ],
-        {
-            id: 1,
-            descricao: '✨Efeito Glow: A remoção dos pelos elimina células mortas, uniformiza o tom da pele e realça sua maquiagem e hidratação natural.',
-        },
-    {
-        id: 2,
-        descricao: '⏳ Durabilidade: Até 20 Dias Livre: Esqueça a manutenção diária. Desfrute de uma pele lisa e macia por muito mais tempo.'
-    },
-    {
-        id: 3,
-        descricao: '🍃 Pele que Respira: Reduz a oleosidade e impurezas acumuladas, proporcionando um toque aveludado e sensação de limpeza real.'
-    },
-    {
-        id: 4,
-        descricao: '📉 Fios Mais Finos: Com a frequência, os pelos nascem mais fracos e discretos, tornando a manutenção cada vez mais suave.'
-    },
-    {
-        id: 5,
-        link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-        descricao: 'Rosto'
-    }
-],
-Nariz = [
-    titulo=[
-                {
-                    id: 1,
-                    titulo: "Depilação do Nariz",
-                    descricao: 'Realce sua beleza natural com uma pele iluminada e uniforme.'
-                }
-            ],
-    {
-        id: 1,
-        descricao: '✨ Aparência Mais Limpa: Remove os pelos visíveis do nariz, deixando o rosto com aspecto mais organizado e agradável.',
-    },
-    {
-        id: 2,
-        descricao: '⏳ Resultado Duradouro: A remoção pela raiz garante até 15–20 dias sem pelos aparentes.',
-    },
-    {
-        id: 3,
-        descricao: '🍃 Higiene e Bem-Estar: Ajuda a reduzir o acúmulo de sujeira e impurezas, proporcionando maior sensação de limpeza.'
-    },
-    {
-        id: 4,
-        descricao: '📉 Pelos Mais Finos e Discretos: Com a manutenção regular, os pelos crescem mais fracos, finos e menos evidentes.'
-    },
-    {
-        id: 5,
-        link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-        descricao: 'Nariz'
-    }
-]
-]
+/**
+ * Dados de tratamentos e detalhes de serviços
+ * Estrutura: { categoria: [{ name, header, benefits, link }] }
+ */
 
-const Tronco  = [
-    Ombro = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação do Ombro',
-                    descricao: 'Sinta a leveza e o cuidado de uma pele lisa e bem tratada nos ombros '
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Pele Mais Lisa e Uniforme: A cera remove os pelos desde a raiz, deixando os ombros com textura uniforme e aparência suave.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Fique por semanas com a pele lisinha, sem a necessidade de manutenção constante.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Frescor: A depilação completa proporciona um visual mais limpo, leve e bem cuidado.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos e Discretos: Com o tempo, os pelos tendem a crescer mais fracos, finos e menos visíveis.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Ombro'
-        }
-    ],
+const createTreatment = (name, headerTitle, headerDescription, benefits, link) => ({
+  name,
+  header: {
+    titulo: headerTitle,
+    descricao: headerDescription,
+  },
+  benefits: benefits.map((desc, idx) => ({
+    id: idx + 1,
+    descricao: desc,
+  })),
+  link,
+});
 
-    Costas = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação das Costas',
-                    descricao: 'Sinta a liberdade e o conforto de uma pele limpa, lisa e bem cuidada '
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando as costas com aparência uniforme e toque suave.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Aproveite semanas de pele lisinha, sem a necessidade de retoques frequentes.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Frescor: A depilação completa proporciona um visual mais limpo, leve e bem cuidado.'
-        },
-        {
-            id: 4,
-            descricao: '🌿 Sensação de Limpeza e Conforto: A remoção completa dos pelos traz frescor, bem-estar e um visual mais cuidado.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Costas'
-        }
-    ],
+const dados = {
+  Cabeca: [
+    createTreatment(
+      'Rosto',
+      'Depilação do Rosto',
+      'Realce sua beleza natural com uma pele iluminada e uniforme.',
+      [
+        '✨Efeito Glow: A remoção dos pelos elimina células mortas, uniformiza o tom da pele e realça sua maquiagem e hidratação natural.',
+        '⏳ Durabilidade: Até 20 Dias Livre: Esqueça a manutenção diária. Desfrute de uma pele lisa e macia por muito mais tempo.',
+        '🍃 Pele que Respira: Reduz a oleosidade e impurezas acumuladas, proporcionando um toque aveludado e sensação de limpeza real.',
+        '📉 Fios Mais Finos: Com a frequência, os pelos nascem mais fracos e discretos, tornando a manutenção cada vez mais suave.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Nariz',
+      'Depilação do Nariz',
+      'Realce sua beleza natural com uma pele iluminada e uniforme.',
+      [
+        '✨ Aparência Mais Limpa: Remove os pelos visíveis do nariz, deixando o rosto com aspecto mais organizado e agradável.',
+        '⏳ Resultado Duradouro: A remoção pela raiz garante até 15–20 dias sem pelos aparentes.',
+        '🍃 Higiene e Bem-Estar: Ajuda a reduzir o acúmulo de sujeira e impurezas, proporcionando maior sensação de limpeza.',
+        '📉 Pelos Mais Finos e Discretos: Com a manutenção regular, os pelos crescem mais fracos, finos e menos evidentes.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Buço',
+      'Depilação do Buço',
+      'Realce sua beleza natural com uma pele iluminada e uniforme.',
+      [
+        '✨ Aparência Mais Suave: Remove os pelos do buço, deixando o rosto com aspecto mais delicado e harmonioso.',
+        '⏳ Resultado Duradouro: Até 15–20 dias sem pelos visíveis.',
+        '🍃 Pele Lisa e Macia: Proporciona toque macio e aparência rejuvenescida.',
+        '📉 Pelos Mais Finos: Com sessões regulares, os pelos crescem mais fracos e discretos.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+  ],
 
-    Abdomen = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação do Abdômen',
-                    descricao: 'Realce o cuidado com o corpo e sinta a leveza de uma pele lisa e uniforme'
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando o abdômen com textura suave e aparência homogênea.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Desfrute de semanas com a pele lisinha, sem necessidade de retoques constantes.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Bem-Estar: A remoção completa dos pelos proporciona um visual mais limpo, confortável e agradável.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos com o Tempo: Com a depilação frequente, os pelos crescem mais fracos, finos e menos aparentes.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Abdômen'
-        }
-    ],
-]     
+  Tronco: [
+    createTreatment(
+      'Ombro',
+      'Depilação do Ombro',
+      'Sinta a leveza e o cuidado de uma pele lisa e bem tratada nos ombros',
+      [
+        '✨ Pele Mais Lisa e Uniforme: A cera remove os pelos desde a raiz, deixando os ombros com textura uniforme e aparência suave.',
+        '🕒 Resultados Duradouros: Fique por semanas com a pele lisinha, sem a necessidade de manutenção constante.',
+        '🌿 Sensação de Limpeza e Frescor: A depilação completa proporciona um visual mais limpo, leve e bem cuidado.',
+        '📉 Pelos Mais Finos e Discretos: Com o tempo, os pelos tendem a crescer mais fracos, finos e menos visíveis.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Costas',
+      'Depilação das Costas',
+      'Sinta a liberdade e o conforto de uma pele limpa, lisa e bem cuidada',
+      [
+        '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando as costas com aparência uniforme e toque suave.',
+        '🕒 Resultados Duradouros: Aproveite semanas de pele lisinha, sem a necessidade de retoques frequentes.',
+        '🌿 Sensação de Limpeza e Frescor: A depilação completa proporciona um visual mais limpo, leve e bem cuidado.',
+        '🌿 Sensação de Limpeza e Conforto: A remoção completa dos pelos traz frescor, bem-estar e um visual mais cuidado.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Abdômen',
+      'Depilação do Abdômen',
+      'Realce o cuidado com o corpo e sinta a leveza de uma pele lisa e uniforme',
+      [
+        '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando o abdômen com textura suave e aparência homogênea.',
+        '🕒 Resultados Duradouros: Desfrute de semanas com a pele lisinha, sem necessidade de retoques constantes.',
+        '🌿 Sensação de Limpeza e Bem-Estar: A remoção completa dos pelos proporciona um visual mais limpo, confortável e agradável.',
+        '📉 Pelos Mais Finos com o Tempo: Com a depilação frequente, os pelos crescem mais fracos, finos e menos aparentes.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+  ],
 
-const Braco  = [
-    Bracos = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação de Braço',
-                    descricao: 'Valorize a suavidade da pele e sinta a confiança de braços bem cuidados'
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando os braços com textura macia e aparência uniforme.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Aproveite semanas de pele lisinha, reduzindo a necessidade de retoques frequentes.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Leveza: A remoção completa dos pelos proporciona um visual mais limpo, leve e agradável ao toque.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos e Discretos: Com o tempo, os pelos crescem mais fracos, finos e menos visíveis.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Braço'
-        }
-    ],
+  Braco: [
+    createTreatment(
+      'Braço',
+      'Depilação de Braço',
+      'Valorize a suavidade da pele e sinta a confiança de braços bem cuidados',
+      [
+        '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando os braços com textura macia e aparência uniforme.',
+        '🕒 Resultados Duradouros: Aproveite semanas de pele lisinha, reduzindo a necessidade de retoques frequentes.',
+        '🌿 Sensação de Limpeza e Leveza: A remoção completa dos pelos proporciona um visual mais limpo, leve e agradável ao toque.',
+        '📉 Pelos Mais Finos e Discretos: Com o tempo, os pelos crescem mais fracos, finos e menos visíveis.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Antebraço',
+      'Depilação de Antebraço',
+      'Realce a beleza natural da pele com leveza, suavidade e cuidado',
+      [
+        '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando o antebraço com textura suave e aparência uniforme.',
+        '🕒 Resultados Duradouros: Desfrute de semanas de pele lisinha, sem a necessidade de retoques constantes.',
+        '🌿 Sensação de Limpeza e Conforto: A remoção dos pelos proporciona um visual mais limpo, leve e agradável ao toque.',
+        '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, os pelos crescem mais fracos, finos e menos aparentes.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Axilas',
+      'Depilação de Axilas',
+      'Conforto e cuidado para você se sentir seguro o tempo todo',
+      [
+        '✨ Pele Lisa e Macia: Remove pelos desde a raiz, deixando axilas suaves e uniformes.',
+        '🕒 Resultados Duradouros: Até 20 dias sem pelos aparentes.',
+        '🌿 Higiene e Frescor: Reduz odor e proporciona sensação de limpeza prolongada.',
+        '📉 Pelos Mais Finos: Com manutenção regular, pelos crescem mais fracos e discretos.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Ombro ao Dedinho da Mão',
+      'Depilação do Ombro ao Dedinho da Mão',
+      'Cuidado completo para braços lisos, uniformes e bem definidos em todos os detalhes',
+      [
+        '✨ Depilação Completa e Uniforme: Remove pelos desde o ombro até o dedinho da mão, garantindo acabamento uniforme em toda a extensão do braço.',
+        '🕒 Resultados Duradouros: Semanas de pele lisinha, reduzindo retoques frequentes.',
+        '🌿 Sensação de Limpeza e Leveza: Remoção total traz conforto, frescor e visual mais limpo e elegante.',
+        '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, pelos crescem mais fracos, finos e menos aparentes em toda a região.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Dedinho da Mão',
+      'Depilação do Dedinho da Mão',
+      'Pequenos detalhes que fazem toda a diferença no cuidado com as mãos',
+      [
+        '✨ Toque Suave e Delicado: Remove pelos desde a raiz, deixando dedinho com aparência limpa e macia.',
+        '🕒 Resultados Duradouros: Mesmo em áreas pequenas, resultados duram mais, mantendo pele lisinha por semanas.',
+        '🌿 Sensação de Limpeza e Cuidado: Remoção valoriza estética das mãos, trazendo visual mais delicado e bem cuidado.',
+        '📉 Pelos Mais Finos e Discretos: Com o tempo, pelos crescem mais fracos, finos e quase imperceptíveis.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+  ],
 
-    Antebraco = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação de Antebraço',
-                    descricao: 'Realce a beleza natural da pele com leveza, suavidade e cuidado'
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando o antebraço com textura suave e aparência uniforme.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Desfrute de semanas de pele lisinha, sem a necessidade de retoques constantes.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Conforto: A remoção dos pelos proporciona um visual mais limpo, leve e agradável ao toque.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, os pelos crescem mais fracos, finos e menos aparentes.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Antebraço'
-        }
-    ],
+  Quadril: [
+    createTreatment(
+      'Virilha',
+      'Depilação de Virilha',
+      'Conforto, cuidado e suavidade para você se sentir confiante todos os dias',
+      [
+        '✨ Pele Lisa e Bem Cuidada: Remove pelos desde a raiz, deixando região mais lisa e com aparência uniforme.',
+        '🕒 Resultados Duradouros: Semanas de suavidade e limpeza, sem retoques constantes.',
+        '🌿 Sensação de Frescor e Conforto: Remoção proporciona leveza, higiene e sensação prolongada de bem-estar.',
+        '📉 Pelos Mais Finos com o Tempo: Com depilação regular, pelos crescem mais fracos, finos e menos aparentes.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Glúteos',
+      'Depilação de Glúteos',
+      'Sinta o conforto e a suavidade de uma pele bem cuidada em todos os detalhes',
+      [
+        '✨ Pele Lisa e Uniforme: Remove pelos desde a raiz, deixando glúteos mais lisos com aparência uniforme.',
+        '🕒 Resultados Duradouros: Semanas de pele macia, reduzindo retoques frequentes.',
+        '🌿 Sensação de Limpeza e Conforto: Remoção proporciona frescor, higiene e bem-estar prolongado.',
+        '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, pelos crescem mais fracos, finos e menos aparentes.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+  ],
 
-    DedinhodaMao = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação do Dedinho da Mão',
-                    descricao: 'Pequenos detalhes que fazem toda a diferença no cuidado com as mãos'
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Toque Suave e Delicado: A depilação a cera remove os pelos desde a raiz, deixando o dedinho com aparência limpa e macia.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Mesmo em áreas pequenas, os resultados duram mais, mantendo a pele lisinha por semanas.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Cuidado: A remoção dos pelos valoriza a estética das mãos, trazendo um visual mais delicado e bem cuidado.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos e Discretos: Com o tempo, os pelos crescem mais fracos, finos e quase imperceptíveis.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Dedinho da Mão'
-        }
-    ],
-    DoOmbroAteODedinhoDaMao = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação do Ombro ao Dedinho da Mão',
-                    descricao: 'Cuidado completo para braços lisos, uniformes e bem definidos em todos os detalhes'
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Depilação Completa e Uniforme: Remove os pelos desde o ombro até o dedinho da mão, garantindo um acabamento uniforme em toda a extensão do braço.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: A cera proporciona semanas de pele lisinha, reduzindo a necessidade de retoques frequentes.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Leveza: A remoção total dos pelos traz conforto, frescor e um visual mais limpo e elegante.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, os pelos crescem mais fracos, finos e menos aparentes em toda a região.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Ombro ao Dedinho da Mão'
-        }
-    ],
-]
+  Pernas: [
+    createTreatment(
+      'Meia Perna',
+      'Depilação de Meia Perna',
+      'Realce a beleza das pernas com suavidade, leveza e cuidado',
+      [
+        '✨ Pele Lisa e uniforme: Remove pelos desde a raiz, deixando meia perna com textura suave e aparência homogênea.',
+        '🕒 Resultados Duradouros: Semanas de pele lisinha, sem retoques frequentes.',
+        '🌿 Sensação de Limpeza e Frescor: Remoção proporciona leveza, conforto e visual mais limpo e bem cuidado.',
+        '📉 Pelos Mais Finos com o Tempo: Com depilação regular, pelos crescem mais fracos, finos e menos aparentes.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+    createTreatment(
+      'Perna Toda',
+      'Depilação de Perna Toda',
+      'Sinta a leveza e a confiança de pernas totalmente lisas e bem cuidadas',
+      [
+        '✨ Pele Lisa e Uniforme: Remove pelos desde a raiz, deixando toda perna com aparência uniforme e toque suave.',
+        '🕒 Resultados Duradouros: Semanas com pele lisinha, reduzindo retoques frequentes.',
+        '🌿 Sensação de Limpeza e Conforto: Remoção proporciona conforto, leveza e visual mais limpo.',
+        '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, pelos crescem mais fracos, finos e menos aparentes.',
+      ],
+      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+    ),
+  ],
+};
 
-const Quadril = [
-    Virilha = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação de Virilha',
-                    descricao: 'Conforto, cuidado e suavidade para você se sentir confiante todos os dias'
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Pele Lisa e Bem Cuidada: A depilação a cera remove os pelos desde a raiz, deixando a região mais lisa e com aparência uniforme.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Aproveite semanas de suavidade e limpeza, sem a necessidade de retoques constantes.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Frescor e Conforto: A remoção dos pelos proporciona leveza, higiene e uma sensação prolongada de bem-estar.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos com o Tempo: Com a depilação regular, os pelos crescem mais fracos, finos e menos aparentes.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Virilha'
-        }
-    ],
-
-    Gluteos = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação de Glúteos',
-                    descricao: 'Sinta o conforto e a suavidade de uma pele bem cuidada em todos os detalhes'
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando a região dos glúteos mais lisa e com aparência uniforme.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Aproveite semanas de pele macia, reduzindo a necessidade de retoques frequentes.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Conforto: A remoção completa dos pelos proporciona frescor, higiene e bem-estar prolongado.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, os pelos crescem mais fracos, finos e menos aparentes.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Gluteos'
-        }
-    ],
-]
-
-const Pernas = [
-    meiaPerna = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação de Meia Perna',
-                    descricao: 'Realce a beleza das pernas com suavidade, leveza e cuidado'
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Pele Lisa e uniforme: A depilação a cera remove os pelos desde a raiz, deixando a meia perna com textura suave e aparência homogênea.',
-        },
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Aproveite semanas de pele lisinha, sem a necessidade de retoques frequentes.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Frescor: A remoção dos pelos proporciona leveza, conforto e um visual mais limpo e bem cuidado.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos com o Tempo: Com a depilação regular, os pelos crescem mais fracos, finos e menos aparentes.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Meia Perna'
-        }
-    ],
-
-    PernaToda = [
-        titulo=[
-                {
-                    id: 1,
-                    titulo: 'Depilação de Perna Toda',
-                    descricao: 'Sinta a leveza e a confiança de pernas totalmente lisas e bem cuidadas'
-                }
-            ],
-        {
-            id: 1,
-            descricao: '✨ Pele Lisa e Uniforme: A depilação a cera remove os pelos desde a raiz, deixando toda a perna com aparência uniforme e toque suave.',
-        }, 
-        {
-            id: 2,
-            descricao: '🕒 Resultados Duradouros: Desfrute de semanas com a pele lisinha, reduzindo a necessidade de retoques frequentes.',
-        },
-        {
-            id: 3,
-            descricao: '🌿 Sensação de Limpeza e Conforto: A remoção completa dos pelos proporciona conforto, leveza e um visual mais limpo.'
-        },
-        {
-            id: 4,
-            descricao: '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, os pelos crescem mais fracos, finos e menos aparentes.'
-        },
-        {
-            id: 5,
-            link: 'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link',
-            descricao: 'Perna Toda'
-        }
-    ],
-]
-
-export default {Cabeca, Tronco, Braco, Quadril, Pernas};
+export default dados;

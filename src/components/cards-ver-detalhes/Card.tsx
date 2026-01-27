@@ -7,41 +7,54 @@ import Image from "next/image";
 
 export default function Card({info} : {info: string}) {
     const [dadosEncontrados, setDadosEncontrados] = useState<any>(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if(!info) return;
+        if (!info) {
+            setLoading(false);
+            return;
+        }
+
+        setLoading(true);
         
         const buscarDados = () => {
-            for(const categoria in dados) {
-                const itens = dados[categoria];
-                for(const subItem of itens){
-                    if(Array.isArray(subItem)){
-                        const ultimoItem = subItem[subItem.length - 1];
-                        if(ultimoItem && ultimoItem.id === 5 && ultimoItem.descricao === info){
-                            const tituloBlock = Array.isArray(subItem[0]) ? subItem[0][0] : subItem[0];
-                            setDadosEncontrados({
-                                titulo: tituloBlock?.titulo || '',
-                                descricao: tituloBlock?.descricao || '',
-                                itens: subItem.slice(1, -1),
-                                link: ultimoItem.link || '',
-                            });
-                            return;
-                        }
-                    } 
+            // Iterar por cada categoria em dados
+            for (const categoria in dados) {
+                const tratamentos = dados[categoria];
+                
+                // Encontrar o tratamento cujo name corresponde a 'info'
+                const tratamento = tratamentos.find(
+                    (t: any) => t.name === info
+                );
+
+                if (tratamento) {
+                    setDadosEncontrados({
+                        titulo: tratamento.header.titulo,
+                        descricao: tratamento.header.descricao,
+                        beneficios: tratamento.benefits,
+                        link: tratamento.link,
+                    });
+                    setLoading(false);
+                    return;
                 }
             }
+
+            // Nenhum tratamento encontrado
+            setLoading(false);
         };
+
         buscarDados();
     }, [info]);
 
-    if(!dadosEncontrados) return <div>Carregando...</div>;
+    if (loading) return <div>Carregando...</div>;
+    if (!dadosEncontrados) return <div>Tratamento não encontrado.</div>;
 
     return (
         <div className="container-card">
             <h2 className={styles.titulo}>{dadosEncontrados?.titulo}</h2>
             <p>{dadosEncontrados.descricao}</p>
             <div className="card-containers titulo-txt">
-                {dadosEncontrados.itens.map((item: any, index: number) => (
+                {dadosEncontrados.beneficios.map((item: any, index: number) => (
                     <div key={index}>
                         <p>{item.descricao}</p>
                     </div>
@@ -51,7 +64,7 @@ export default function Card({info} : {info: string}) {
                 <Image src={IconeWhatsapp} alt="Icone do Whatsapp" className={"icone"}/>
                 {dadosEncontrados.link && (
                     <a href={dadosEncontrados.link} target="_blank" rel="noopener noreferrer">
-                        Quero agendar {dadosEncontrados.descricao}
+                        Quero agendar {dadosEncontrados.titulo}
                     </a>
                 )}
             </div>
