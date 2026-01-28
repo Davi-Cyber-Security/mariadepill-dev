@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { PlusCircle } from "@deemlol/next-icons";
 import { IoMdRemoveCircleOutline } from "react-icons/io";
+import styles from '../styles/Style-TreatmentMenu/TreatmentMenu.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import ImgCabeca from '../../../public/cabeca.png';
@@ -15,7 +16,6 @@ import dados from '../Sessao-Servicos/dados'
 
 
 export default function TreatmentMenu(){
-    // qual seção está aberta: 'cabeca' | 'tronco' | 'quadril' | 'braco' | 'perna' | null
     const [openSection, setOpenSection] = useState<string | null>(null);
     const [animating, setAnimating] = useState(false);
     const animationDuration = 300; // ms
@@ -63,7 +63,7 @@ export default function TreatmentMenu(){
             <div className="container-opcao box-shadow">
                 <div className="container-opcao-item">
                     <p>Cabeça</p>
-                    {openSection === 'cabeca' ? "" : <Image src={ImgCabeca} alt='Icone Cabeça' className='icone'/>}
+                    {openSection === 'cabeca' ? "" : <Image src={ImgCabeca} alt='Icone Cabeça' className={`${styles.icone}`}/>}
                 </div>
                 <div className='botao background-rosa-claro' onClick={() => toggleSection('cabeca')}>
                     {openSection === 'cabeca' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}
@@ -92,7 +92,7 @@ export default function TreatmentMenu(){
             <div className="container-opcao box-shadow">
                 <div className="container-opcao-item">
                     <p>Tronco</p>
-                    {openSection === 'tronco' ? "" : <Image src={ImgTronco} alt='Icone do Tronco' className='icone'/>}
+                    {openSection === 'tronco' ? "" : <Image src={ImgTronco} alt='Icone do Tronco' className={`${styles.icone}`}/>}
                 </div>
                 <div className='botao background-rosa-claro' onClick={() => toggleSection('tronco')}>
                     {openSection === 'tronco' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}
@@ -121,7 +121,7 @@ export default function TreatmentMenu(){
             <div className="container-opcao box-shadow">
                 <div className="container-opcao-item">
                     <p>Quadril</p>
-                    {openSection === 'quadril' ? "" : <Image src={imgQuadril} alt='Icone do Quadril' className='icone'/>}
+                    {openSection === 'quadril' ? "" : <Image src={imgQuadril} alt='Icone do Quadril' className={`${styles.icone}`}/>}
                 </div>
                 <div className='botao background-rosa-claro' onClick={() => toggleSection('quadril')}>
                     {openSection === 'quadril' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}
@@ -150,7 +150,7 @@ export default function TreatmentMenu(){
             <div className="container-opcao box-shadow">
                 <div className="container-opcao-item">
                     <p>Braços</p>
-                    {openSection === 'braco' ? "" : <Image src={imgBracos} alt='Icone dos Braços' className='icone'/>}
+                    {openSection === 'braco' ? "" : <Image src={imgBracos} alt='Icone dos Braços' className={`${styles.icone}`}/>}
                 </div>
                 <div className='botao background-rosa-claro' onClick={() => toggleSection('braco')}>
                     {openSection === 'braco' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}
@@ -179,7 +179,7 @@ export default function TreatmentMenu(){
             <div className="container-opcao box-shadow">
                 <div className="container-opcao-item">
                     <p>Pernas</p>
-                    {openSection === 'perna' ? "" : <Image src={imgPernas} alt='Icone das Pernas' className='icone'/>}
+                    {openSection === 'perna' ? "" : <Image src={imgPernas} alt='Icone das Pernas' className={`${styles.icone}`}/>}
                 </div>
                 <div className='botao background-rosa-claro' onClick={() => toggleSection('perna')}>
                     {openSection === 'perna' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}

@@ -18,11 +18,10 @@ export default function Card({info} : {info: string}) {
         setLoading(true);
         
         const buscarDados = () => {
-            // Iterar por cada categoria em dados
+            
             for (const categoria in dados) {
                 const tratamentos = dados[categoria];
-                
-                // Encontrar o tratamento cujo name corresponde a 'info'
+
                 const tratamento = tratamentos.find(
                     (t: any) => t.name === info
                 );
@@ -39,7 +38,7 @@ export default function Card({info} : {info: string}) {
                 }
             }
 
-            // Nenhum tratamento encontrado
+            
             setLoading(false);
         };
 
