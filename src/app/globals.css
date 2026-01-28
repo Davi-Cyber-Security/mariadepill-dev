@@ -193,3 +193,14 @@
   width: 100%;
   text-align: center;
 }
+
+.sessao-card {
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 15px #BBB1F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 200px !important;
+}

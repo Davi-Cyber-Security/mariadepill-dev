@@ -60,28 +60,29 @@ export default function TreatmentMenu(){
                 )}
             </div>
 
-            <div className="container-opcao box-shadow">
-                <div className="container-opcao-item">
-                    <p>Cabeça</p>
-                    {openSection === 'cabeca' ? "" : <Image src={ImgCabeca} alt='Icone Cabeça' className={`${styles.icone}`}/>}
+            <div className={styles.sectionContainer}>
+                <div className={styles.headerContainer}>
+                    <div className={styles.containerOpcaoStyles}>
+                        <p>Cabeça</p>
+                        <Image src={ImgCabeca} alt='Icone Cabeça' className={styles.icone}/>
+                    </div>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('cabeca')}>
+                        {openSection === 'cabeca' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle color="#FFFFFF" /> </div>}
+                    </div>
                 </div>
-                <div className='botao background-rosa-claro' onClick={() => toggleSection('cabeca')}>
-                    {openSection === 'cabeca' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}
-                </div>
-
                 <div
-                    className="cards"
+                    className={styles.cardsContainer}
                     style={{
-                        maxHeight: openSection === 'cabeca' ? '800px' : '0px',
+                        maxHeight: openSection === 'cabeca' ? '1000px' : '0px',
                         transition: `max-height ${animationDuration}ms ease`,
                         overflow: 'hidden',
                     }}
                 >
                     {dados.cabeca?.map((item: any, idx: number) => (
                         <div className='sessao-card' key={idx}>
-                            <Image src={item.imagem} alt={item.titulo} className='icone-card'/>
+                            <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
-                            <div className='botao-ver-detalhes'>
+                            <div className={styles.botaoVerDetalhesCard}>
                                 <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
                             </div>
                         </div>
@@ -89,17 +90,18 @@ export default function TreatmentMenu(){
                 </div>
             </div>
 
-            <div className="container-opcao box-shadow">
-                <div className="container-opcao-item">
-                    <p>Tronco</p>
-                    {openSection === 'tronco' ? "" : <Image src={ImgTronco} alt='Icone do Tronco' className={`${styles.icone}`}/>}
+            <div className={styles.sectionContainer}>
+                <div className={styles.headerContainer}>
+                    <div className={styles.containerOpcaoStyles}>
+                        <p>Tronco</p>
+                        <Image src={ImgTronco} alt='Icone do Tronco' className={styles.icone}/>
+                    </div>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('tronco')}>
+                        {openSection === 'tronco' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle color="#FFFFFF" /> </div>}
+                    </div>
                 </div>
-                <div className='botao background-rosa-claro' onClick={() => toggleSection('tronco')}>
-                    {openSection === 'tronco' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}
-                </div>
-
                 <div
-                    className="cards"
+                    className={styles.cardsContainer}
                     style={{
                         maxHeight: openSection === 'tronco' ? '800px' : '0px',
                         transition: `max-height ${animationDuration}ms ease`,
@@ -108,9 +110,9 @@ export default function TreatmentMenu(){
                 >
                     {dados.tronco?.map((item: any, idx: number) => (
                         <div className='sessao-card' key={idx}>
-                            <Image src={item.imagem} alt={item.titulo} className='icone-card'/>
+                            <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
-                            <div className='botao-ver-detalhes'>
+                            <div className={styles.botaoVerDetalhesCard}>
                                 <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
                             </div>
                         </div>
@@ -118,28 +120,29 @@ export default function TreatmentMenu(){
                 </div>
             </div>
 
-            <div className="container-opcao box-shadow">
-                <div className="container-opcao-item">
-                    <p>Quadril</p>
-                    {openSection === 'quadril' ? "" : <Image src={imgQuadril} alt='Icone do Quadril' className={`${styles.icone}`}/>}
+            <div className={styles.sectionContainer}>
+                <div className={styles.headerContainer}>
+                    <div className={styles.containerOpcaoStyles}>
+                        <p>Quadril</p>
+                        <Image src={imgQuadril} alt='Icone do Quadril' className={styles.icone}/>
+                    </div>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('quadril')}>
+                        {openSection === 'quadril' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </div>}
+                    </div>
                 </div>
-                <div className='botao background-rosa-claro' onClick={() => toggleSection('quadril')}>
-                    {openSection === 'quadril' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}
-                </div>
-
                 <div
-                    className="cards"
+                    className={styles.cardsContainer}
                     style={{
-                        maxHeight: openSection === 'quadril' ? '800px' : '0px',
+                        maxHeight: openSection === 'quadril' ? '100%' : '0px',
                         transition: `max-height ${animationDuration}ms ease`,
                         overflow: 'hidden',
                     }}
                 >
                     {dados.quadril?.map((item: any, idx: number) => (
                         <div className='sessao-card' key={idx}>
-                            <Image src={item.imagem} alt={item.titulo} className='icone-card'/>
+                            <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
-                            <div className='botao-ver-detalhes'>
+                            <div className={styles.botaoVerDetalhesCard}>
                                 <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
                             </div>
                         </div>
@@ -147,17 +150,18 @@ export default function TreatmentMenu(){
                 </div>
             </div>
 
-            <div className="container-opcao box-shadow">
-                <div className="container-opcao-item">
-                    <p>Braços</p>
-                    {openSection === 'braco' ? "" : <Image src={imgBracos} alt='Icone dos Braços' className={`${styles.icone}`}/>}
+            <div className={styles.sectionContainer}>
+                <div className={styles.headerContainer}>
+                    <div className={styles.containerOpcaoStyles}>
+                        <p>Braços</p>
+                        <Image src={imgBracos} alt='Icone dos Braços' className={styles.icone}/>
+                    </div>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('braco')}>
+                        {openSection === 'braco' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </div>}
+                    </div>
                 </div>
-                <div className='botao background-rosa-claro' onClick={() => toggleSection('braco')}>
-                    {openSection === 'braco' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}
-                </div>
-
                 <div
-                    className="cards"
+                    className={styles.cardsContainer}
                     style={{
                         maxHeight: openSection === 'braco' ? '800px' : '0px',
                         transition: `max-height ${animationDuration}ms ease`,
@@ -166,9 +170,9 @@ export default function TreatmentMenu(){
                 >
                     {dados.braco?.map((item: any, idx: number) => (
                         <div className='sessao-card' key={idx}>
-                            <Image src={item.imagem} alt={item.titulo} className='icone-card'/>
+                            <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
-                            <div className='botao-ver-detalhes'>
+                            <div className={styles.botaoVerDetalhesCard}>
                                 <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
                             </div>
                         </div>
@@ -176,17 +180,18 @@ export default function TreatmentMenu(){
                 </div>
             </div>
 
-            <div className="container-opcao box-shadow">
-                <div className="container-opcao-item">
-                    <p>Pernas</p>
-                    {openSection === 'perna' ? "" : <Image src={imgPernas} alt='Icone das Pernas' className={`${styles.icone}`}/>}
+            <div className={styles.sectionContainer}>
+                <div className={styles.headerContainer}>
+                    <div className={styles.containerOpcaoStyles}>
+                        <p>Pernas</p>
+                        <Image src={imgPernas} alt='Icone das Pernas' className={styles.icone}/>
+                    </div>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('perna')}>
+                        {openSection === 'perna' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </div>}
+                    </div>
                 </div>
-                <div className='botao background-rosa-claro' onClick={() => toggleSection('perna')}>
-                    {openSection === 'perna' ? <> <span>Fechar</span> <IoMdRemoveCircleOutline /></> : <><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </>}
-                </div>
-
                 <div
-                    className="cards"
+                    className={styles.cardsContainer}
                     style={{
                         maxHeight: openSection === 'perna' ? '800px' : '0px',
                         transition: `max-height ${animationDuration}ms ease`,
@@ -195,9 +200,9 @@ export default function TreatmentMenu(){
                 >
                     {dados.perna?.map((item: any, idx: number) => (
                         <div className='sessao-card' key={idx}>
-                            <Image src={item.imagem} alt={item.titulo} className='icone-card'/>
+                            <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
-                            <div className='botao-ver-detalhes'>
+                            <div className={styles.botaoVerDetalhesCard}>
                                 <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
                             </div>
                         </div>

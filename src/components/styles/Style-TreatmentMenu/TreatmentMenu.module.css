@@ -1,4 +1,197 @@
-.icone{
+/* ============================================
+   CONTAINER PRINCIPAL DA SEÇÃO
+   ============================================ */
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    transition: all 0.3s ease;
+}
+
+/* ============================================
+   HEADER - ÍCONE E BOTÃO
+   ============================================ */
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   CONTAINER DE OPÇÕES (ÍCONE)
+   ============================================ */
+.containerOpcaoStyles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+
+/* ============================================
+   ÍCONE
+   ============================================ */
+.icone {
     width: 40px;
     height: 40px;
+}
+
+/* ============================================
+   CONTAINER DO BOTÃO
+   ============================================ */
+.containerBotaoVerDetalhes {
+    width: 100px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.containerBotaoVerDetalhes:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   BOTÃO DE AÇÃO
+   ============================================ */
+.botaoVerDetalhes {
+    width: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 2px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ============================================
+   CONTAINER DE CARDS
+   ============================================ */
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+/* ============================================
+   IMAGEM DO CARD (HEXÁGONO)
+   ============================================ */
+.iconeCard {
+    width: 100px !important;
+    height: 100px !important;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+}
+
+/* ============================================
+   BOTÃO VER DETALHES DO CARD
+   ============================================ */
+.botaoVerDetalhesCard {
+    margin-top: 10px 20px;
+    background-color: #611D67;
+    border-radius: 9999px;
+    width: 80px;
+    height: 30px;
+}
+
+.botaoVerDetalhesCard button {
+    background-color: var(--bg-principal);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 10px;
+}
+
+.botaoVerDetalhesCard button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   RESPONSIVIDADE - TABLET
+   ============================================ */
+@media (max-width: 768px) {
+    .headerContainer {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .containerOpcaoStyles {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cardsContainer {
+        margin-top: 15px;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .iconeCard {
+        width: 160px !important;
+        height: 160px !important;
+    }
+}
+
+/* ============================================
+   RESPONSIVIDADE - MOBILE
+   ============================================ */
+@media (max-width: 480px) {
+    .headerContainer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .containerOpcaoStyles {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .containerBotaoVerDetalhes {
+        width: 90px;
+    }
+
+    .botaoVerDetalhes {
+        width: 90px;
+        font-size: 12px;
+        gap: 5px;
+    }
+
+    .cardsContainer {
+        margin-top: 12px;
+        gap: 12px;
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iconeCard {
+        width: 140px !important;
+        height: 140px !important;
+    }
+
+    .botaoVerDetalhesCard button {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
 }
