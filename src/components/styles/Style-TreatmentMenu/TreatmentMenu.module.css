@@ -1,6 +1,4 @@
-/* ============================================
-   CONTAINER PRINCIPAL DA SEÇÃO
-   ============================================ */
+
 .sectionContainer {
     display: flex;
     flex-direction: column;
@@ -9,9 +7,7 @@
     transition: all 0.3s ease;
 }
 
-/* ============================================
-   HEADER - ÍCONE E BOTÃO
-   ============================================ */
+
 .headerContainer {
     display: flex;
     align-items: center;
@@ -22,9 +18,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ============================================
-   CONTAINER DE OPÇÕES (ÍCONE)
-   ============================================ */
+
 .containerOpcaoStyles {
     display: flex;
     align-items: center;
@@ -32,17 +26,13 @@
     width: 50%;
 }
 
-/* ============================================
-   ÍCONE
-   ============================================ */
+
 .icone {
     width: 40px;
     height: 40px;
 }
 
-/* ============================================
-   CONTAINER DO BOTÃO
-   ============================================ */
+
 .containerBotaoVerDetalhes {
     width: 100px;
     border-radius: 9999px;
@@ -54,9 +44,6 @@
     transform: scale(1.05);
 }
 
-/* ============================================
-   BOTÃO DE AÇÃO
-   ============================================ */
 .botaoVerDetalhes {
     width: 100px;
     text-align: center;
@@ -72,9 +59,7 @@
     font-size: 14px;
 }
 
-/* ============================================
-   CONTAINER DE CARDS
-   ============================================ */
+
 .cardsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -85,9 +70,7 @@
     width: 100%;
 }
 
-/* ============================================
-   IMAGEM DO CARD (HEXÁGONO)
-   ============================================ */
+
 .iconeCard {
     width: 100px !important;
     height: 100px !important;
@@ -95,9 +78,7 @@
     clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
 }
 
-/* ============================================
-   BOTÃO VER DETALHES DO CARD
-   ============================================ */
+
 .botaoVerDetalhesCard {
     margin-top: 10px 20px;
     background-color: #611D67;
@@ -123,9 +104,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* ============================================
-   RESPONSIVIDADE - TABLET
-   ============================================ */
+
 @media (max-width: 768px) {
     .headerContainer {
         flex-direction: column;
@@ -150,9 +129,7 @@
     }
 }
 
-/* ============================================
-   RESPONSIVIDADE - MOBILE
-   ============================================ */
+
 @media (max-width: 480px) {
     .headerContainer {
         flex-direction: column;
