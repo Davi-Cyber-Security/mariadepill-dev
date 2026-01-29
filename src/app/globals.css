@@ -47,6 +47,10 @@
   --color-text-secundario: #6F66AD;
   --color-botao-principal: #463E70;
   --color-offwhite: #FAF8FC;
+  --font-playfair-display: "Playfair Display", serif;
+  --font-lato: "Lato", sans-serif;
+  --font-questrial: "Questrial", sans-serif;
+  --font-konkhmer: "Konkhmer Sleokchher", sans-serif;
   --drop-shadow-sombra-padrao: 0px 4px 10px rgba(0, 0, 0, 25%);
 }
 
@@ -203,4 +207,9 @@
   padding: 20px;
   width: 100%;
   max-width: 200px !important;
+}
+
+.icone {
+  height: 64px;
+  width: 64px;
 }
