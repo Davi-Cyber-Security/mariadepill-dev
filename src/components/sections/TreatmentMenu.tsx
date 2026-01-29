@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { PlusCircle } from "@deemlol/next-icons";
 import { IoMdRemoveCircleOutline } from "react-icons/io";
+import { FaArrowRightLong } from "react-icons/fa6";
 import styles from '../styles/Style-TreatmentMenu/TreatmentMenu.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -27,7 +28,7 @@ export default function TreatmentMenu(){
     function toggleSection(section: string) {
         if (animating) return;
 
-        // fechar se já estiver aberta
+        
         if (openSection === section) {
             setAnimating(true);
             setOpenSection(null);
@@ -35,7 +36,7 @@ export default function TreatmentMenu(){
             return;
         }
 
-        // trocar de seção com efeito: fechar atual, depois abrir a nova
+        
         if (openSection) {
             setAnimating(true);
             setOpenSection(null);
@@ -49,7 +50,7 @@ export default function TreatmentMenu(){
     }
 
     return (
-        <div>
+        <div className={`${styles.treatmentMenuContainer} container-general`}>
             <p className="txt-rosa">Nosso</p>
             <h2 className="titulo-txt-rosa">Menu de Tratamentos</h2>
             <div className="card-container-blur">
@@ -83,7 +84,7 @@ export default function TreatmentMenu(){
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
@@ -113,7 +114,7 @@ export default function TreatmentMenu(){
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
@@ -143,7 +144,7 @@ export default function TreatmentMenu(){
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
@@ -173,7 +174,7 @@ export default function TreatmentMenu(){
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
@@ -203,15 +204,15 @@ export default function TreatmentMenu(){
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
                             <h3>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}}>Ver Detalhes</button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <Link href={"#linkWhatsapp"} className={"sem-line background-rosa-escuro txt-white"}>
-            <Image src={IconeWhatsapp} alt="Icone do Whatsapp" className={"icone"}/>
+            <Link href={"#linkWhatsapp"} className={`${styles.iconeWhatsapp} sem-line background-rosa-claro txt-white`}>
+            <Image src={IconeWhatsapp} alt="Icone do Whatsapp" className={styles.icone}/>
               Agende agora
             </Link>
         </div>

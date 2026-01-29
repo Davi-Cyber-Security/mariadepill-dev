@@ -1,0 +1,96 @@
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1024px !important;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper{
+    margin-top: 20px auto;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.card-depoimentos{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    overflow-x: auto;
+    padding: 20px 0;
+    background-color: #7A3998;
+}
+
+.tituloGoolge{
+    text-align: center;
+    font-size: 24px;
+}
+.txtRosa{
+    text-align: center;
+}
+
+.titulo-txt-rosa{
+    text-transform: uppercase;
+    
+}
+
+.depoimento-item{
+    position: relative;
+}
+
+.containerRemove{
+    position: relative;
+}
+.removeContainer{
+    width: 100%;
+    height: 40px;
+    background-color: #7A3998;
+    position: absolute;
+    bottom: 1%;
+    z-index: 1000;
+}
+
+.imagem-mariadepill{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.blobMenor{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    position: absolute;
+    top: -10%;
+    left: -2%;
+}
+
+.blobMaior{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    z-index: -1;
+}
+
+.paleta-decoration{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 300px;
+}
+
+.mariaDepill{
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    z-index: 1;
+}
