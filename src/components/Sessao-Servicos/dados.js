@@ -40,7 +40,7 @@ const dados = {
             titulo: "Nariz",
         },
     ],
-    braco: [
+    bracos: [
         {
             imagem: imgAxilas,
             titulo: "Axilas",
@@ -86,7 +86,7 @@ const dados = {
             titulo: "Glúteos",
         },
     ],
-    perna: [
+    pernas: [
         {
             imagem: imgMeiaPerna,
             titulo: "Meia Perna",
