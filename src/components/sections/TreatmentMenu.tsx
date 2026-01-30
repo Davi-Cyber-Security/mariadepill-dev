@@ -20,7 +20,6 @@ export default function TreatmentMenu() {
     const animationDuration = 300;
 
     const [verDetalhes, setVerDetalhes] = useState(false);
-    const [selecionadoBoolean, setSelecionadoBoolean] = useState(false);
     const [selecionado, setSelecionado] = useState('');
 
     const categorias = [
@@ -34,34 +33,27 @@ export default function TreatmentMenu() {
     function toggleSection(section: string) {
         if (animating) return;
 
-        // fechar se já estiver aberta
         if (openSection === section) {
             setAnimating(true);
             setOpenSection(null);
             setTimeout(() => setAnimating(false), animationDuration);
-            return;
-        }
-        // trocar de seção com efeito: fechar atual, depois abrir a nova
-        if (openSection) {
+        } else {
             setAnimating(true);
             setOpenSection(null);
             setTimeout(() => {
                 setOpenSection(section);
                 setAnimating(false);
-            }, animationDuration);
-        } else {
-            setOpenSection(section);
+            }, openSection ? animationDuration : 0);
         }
     }
 
     return (
-        <section>
-            <div className="max-w-7xl mx-auto px-6">
+        <div className={`${styles.treatmentMenuContainer} container-general`}>
+            <section className="max-w-7xl mx-auto px-6">
                 <p className="txt-rosa">Nosso</p>
                 <h2 className="titulo-txt-rosa">Menu de Tratamentos</h2>
-                
                 <div className="card-container-blur">
-                    {verDetalhes && selecionadoBoolean && (
+                    {verDetalhes && selecionado && (
                         <Card info={selecionado} />
                     )}
                 </div>
@@ -107,7 +99,6 @@ export default function TreatmentMenu() {
                                             <button onClick={() => {
                                                 setVerDetalhes(true); 
                                                 setSelecionado(item.titulo); 
-                                                setSelecionadoBoolean(true);
                                             }}>
                                                 Ver Detalhes
                                             </button>
@@ -118,17 +109,12 @@ export default function TreatmentMenu() {
                         </div>
                     </div>
                 ))}
+            </section>
 
-                <div className="w-full flex justify-end mt-12">
-                    <Link 
-                        href="#linkwhatsapp" 
-                        className="font-questrial flex items-center justify-center gap-3 text-center text-xl md:text-[32px] bg-botao-principal rounded-[50px] text-white px-8 py-4 hover:bg-[#3b3654] transition-all hover:scale-105"
-                    >
-                        <Image src={IconeWhatsapp} alt="Icone do Whatsapp" className="w-6 h-6 md:w-8 md:h-8 object-contain"/>
-                        <span>Agende agora</span>
-                    </Link>
-                </div>
-            </div>
-        </section>
+            <Link href="#linkWhatsapp" className="sem-line background-rosa-escuro txt-white">
+                <Image src={IconeWhatsapp} alt="Icone do Whatsapp" className="icone"/>
+                Agende agora
+            </Link>
+        </div>
     );
 }

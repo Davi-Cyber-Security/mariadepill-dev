@@ -1,6 +1,9 @@
 "use client";
 import Image from "next/image";
-import imagem from "@/public/Imagem.svg"
+import styles from '../styles/Testimonials/Testimonials.module.css';
+import Imagem3 from '../../../public/imagem3.png';
+import BlobMenor from '../../../public/BlocoImg/blob.svg';
+import BlobMariaDepill from '../../../public/BlocoImg/blobMariaDepill1.svg';
 import { useState, useEffect } from "react";
 import amandita from "@/public/Ellipse 6.png"
 import blob from "@/public/blob(2) 1.png"
@@ -8,19 +11,28 @@ import blob from "@/public/blob(2) 1.png"
 export default function Testimonials(){
     function carrosselDepoimentos() {}
     return (
-        <section className="w-full flex items-center justify-center bg-[linear-gradient(270deg,#FFFFFF_36%,#9D8BFF_86%)]">
-            <div className="flex w-full max-w-8/12 bg-blue-600">
-                <div>
-                    <div className="p-10 ">
-                        <Image src={amandita} alt="Amandita"/>
-                        <span>
-                            <h1>Amandita</h1>
-                            <h2>Esteticista</h2>
-                        </span>
+        <section className={styles.container}>
+            <h2 className={`${styles.tituloGoolge} titulo-txt-rosa`}>Avaliações do google</h2>
+            <h3 className={`${styles.txtRosa} txt-roxo-claro`}>veja o que nossos clientes dizem sobre nós</h3>
+
+            <div className={styles.wrapper}>
+
+                <div className={styles['card-depoimentos']}>
+                    <Image className={styles.blobMenor} src={BlobMenor} alt="Blob menor"/>
+                    <div className={styles['depoimento-item']}>
+                        <div className={styles.removeContainer}></div>
+                        {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
+                        <script src="https://elfsightcdn.com/platform.js" async></script>
+                        <div className="elfsight-app-fa5b312d-c040-4342-86ed-8676356dc967" data-elfsight-app-lazy>
+                        </div>
                     </div>
-                    <span>
-                        “Super confortavel o ambiente,<br/>profissionais super capacitadas”
-                    </span>
+                    
+                    <div className={styles['paleta-decoration']}>
+                        <Image className={styles.mariaDepill} src={Imagem3} alt="Blob maior"/>
+                        <Image className={styles.blobMaior} src={BlobMariaDepill} alt="Blob maior"/>
+                    </div>
+
+                    
                 </div>
             </div>
             <Image src={blob} alt=""/>
