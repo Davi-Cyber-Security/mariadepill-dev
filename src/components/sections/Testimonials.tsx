@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import styles from '../styles/Testimonials/Testimonials.module.css';
-import Imagem3 from '../../../public/imagem3.png';
+import Imagem3 from '../../../public/imagem3.webp';
 import BlobMenor from '../../../public/BlocoImg/blob.svg';
 import BlobMariaDepill from '../../../public/BlocoImg/blobMariaDepill1.svg';
 import { useState, useEffect } from "react";
-import amandita from "@/public/Ellipse 6.png"
-import blob from "@/public/blob(2) 1.png"
+import amandita from "@/public/Ellipse 6.webp"
+import blob from "@/public/blob(2) 1.webp"
 
 export default function Testimonials(){
     function carrosselDepoimentos() {}

@@ -2,14 +2,14 @@
 import { useState, useEffect } from "react";
 import styles from './estilos/estilo.module.css';
 import dados from './dados';
-import IconeWhatsapp from '../../../public/icone-whatsapp.png';
+import IconeWhatsapp from '../../../public/icone-whatsapp.webp';
 import Image from "next/image";
 
 export default function Card({info} : {info: string}) {
     const [dadosEncontrados, setDadosEncontrados] = useState<any>(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
+        useEffect(() => {
         if (!info) {
             setLoading(false);
             return;
@@ -18,10 +18,10 @@ export default function Card({info} : {info: string}) {
         setLoading(true);
         
         const buscarDados = () => {
-            
-            for (const categoria in dados) {
-                const tratamentos = dados[categoria];
+            const categorias = Object.keys(dados) as Array<keyof typeof dados>;
 
+            for (const categoria of categorias) {
+                const tratamentos = dados[categoria];
                 const tratamento = tratamentos.find(
                     (t: any) => t.name === info
                 );
@@ -37,8 +37,6 @@ export default function Card({info} : {info: string}) {
                     return;
                 }
             }
-
-            
             setLoading(false);
         };
 

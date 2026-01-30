@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import imagem from "../../../public/selecionada 8.png";
+import imagem from "../../../public/selecionada 8.webp";
 
 export default function Hero() {
     return (

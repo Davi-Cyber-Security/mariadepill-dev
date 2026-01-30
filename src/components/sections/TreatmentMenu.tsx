@@ -5,12 +5,12 @@ import { IoMdRemoveCircleOutline } from "react-icons/io";
 import styles from '../styles/Style-TreatmentMenu/TreatmentMenu.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import ImgCabeca from '../../../public/cabeca.png';
-import ImgTronco from '../../../public/tronco.png';
-import imgQuadril from '../../../public/quadril.png';
-import imgBracos from '../../../public/bracos.png';
-import imgPernas from '../../../public/pernas.png';
-import IconeWhatsapp from '../../../public/icone-whatsapp.png';
+import ImgCabeca from '../../../public/cabeca.webp';
+import ImgTronco from '../../../public/tronco.webp';
+import imgQuadril from '../../../public/quadril.webp';
+import imgBracos from '../../../public/bracos.webp';
+import imgPernas from '../../../public/pernas.webp';
+import IconeWhatsapp from '../../../public/icone-whatsapp.webp';
 import Card from '../cards-ver-detalhes/Card';
 import dados from '../Sessao-Servicos/dados';
 

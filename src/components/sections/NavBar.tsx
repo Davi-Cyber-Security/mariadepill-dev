@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from '../../../public/logo.png';
-import IconeWhatsapp from '../../../public/icone-whatsapp.png';
+import Logo from '../../../public/logo.webp';
+import IconeWhatsapp from '../../../public/icone-whatsapp.webp';
 import { BiAdjust } from "react-icons/bi";
 import { useState } from "react";
 

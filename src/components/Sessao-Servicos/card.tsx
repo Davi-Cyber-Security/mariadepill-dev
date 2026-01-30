@@ -6,9 +6,7 @@ import Image from 'next/image';
 export default function CardServicos() {
     const [detalhe, setDetalhe] = useState(null);
 
-    function handleVerDetalhes(categoria){
-        setDetalhe(categoria);
-        return detalhe;
+    function handleVerDetalhes(){
     }
 
     return (
