@@ -1,0 +1,55 @@
+.heroSection{
+    justify-content: space-around;
+}
+
+/* Grid and element-specific styles */
+.heroGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.heroTitle{
+    font-size: 2.8rem; /* base desktop fallback */
+    line-height: 1.05;
+}
+
+.heroButton{
+    padding: 1rem 1.25rem;
+}
+
+.heroImage{
+    width: 100%;
+    max-width: 420px;
+    justify-self: end;
+}
+
+@media screen and (max-width: 767px) {
+    .heroSection{
+        font-size: 14px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* keep side-by-side but tighter columns to avoid break */
+    .heroGrid{
+        grid-template-columns: 45% 55%;
+        gap: 1rem;
+    }
+
+    .heroTitle{
+        font-size: 2rem;
+    }
+
+    .heroButton{
+        padding: 0.6rem 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    .heroImage{
+        max-width: 260px;
+        width: 100%;
+        justify-self: end;
+    }
+}

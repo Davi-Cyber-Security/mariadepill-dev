@@ -12,7 +12,7 @@ import Footer from "@/src/components/sections/Footer";
 export default function Home() {
   return (
     
-    <main className="flex min-h-screen flex-col pt-15">
+    <main className="flex min-h-screen flex-col pt-15" style={{overflow: "hidden"}}>
       {/*Coloquei um padding ai no topo como medida temporaria. Vai q eu descobru outra parada em um futuro a frente*/}
       {/* 1. NavBar (Impacto) */}
       <NavBar />

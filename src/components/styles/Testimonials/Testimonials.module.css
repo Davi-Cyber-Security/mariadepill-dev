@@ -13,7 +13,7 @@
     position: relative;
     margin-top: 20px auto;
     width: 100%;
-    max-width: 1024px;
+    max-width: 1024px !important;
 }
 
 .card-depoimentos{
@@ -83,7 +83,7 @@
 
 .paleta-decoration{
     position: absolute;
-    right: -50%;
+    left: 50%;
     top: -10%;
     width: 100%;
     height: auto;
