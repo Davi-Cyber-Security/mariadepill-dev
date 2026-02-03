@@ -2,13 +2,15 @@
     position: relative;
     width: 100%;
     max-width: 1024px !important;
-    margin: 10% auto;
+    margin: 5% auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 20px;
 }
 
 .wrapper{
+    position: relative;
     margin-top: 20px auto;
     width: 100%;
     max-width: 1024px;
@@ -41,6 +43,8 @@
 
 .depoimento-item{
     position: relative;
+    margin-top: 45px;
+    margin-right: 40%;
 }
 
 .containerRemove{
@@ -72,25 +76,16 @@
 
 .blobMaior{
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
     z-index: -1;
 }
 
 .paleta-decoration{
+    position: absolute;
+    right: -50%;
+    top: -10%;
     width: 100%;
-    max-width: 300px;
     height: auto;
     max-height: 300px;
-}
-
-.mariaDepill{
-    position: absolute;
-    top: 50%;
-    right: 2%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    z-index: 1;
 }

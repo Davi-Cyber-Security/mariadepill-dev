@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from '../../../public/logo.png';
 import IconeWhatsapp from '../../../public/icone-whatsapp.png';
+import styles from "../styles/NavBar/navbar.module.css";
 import { BiAdjust } from "react-icons/bi";
 import { useState } from "react";
 
@@ -22,8 +23,8 @@ export default function NavBar() {
   const [alterarModoParaRoxo, setAlterarModoParaRoxo] = useState(false);
 
   return (
-    <nav className="fixed top-2 inset-x-0 z-50 flex justify-center px-2">
-      <div className=" w-full flex items-center justify-between bg-offwhite shadow-lg rounded-2xl">
+    <nav className={`${styles.navBar} fixed top-2 inset-x-0 z-50 flex justify-center px-2`}>
+      <div className={`${styles.navContent} w-full flex items-center justify-between bg-offwhite shadow-lg rounded-2xl`}>
         
         <Image className="flex background-rosa-escuro m-1 rounded-full w-18 h-18" src={Logo} alt="Logo" />
         

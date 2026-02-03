@@ -26,11 +26,12 @@
 
 .imagemContainer {
     position: relative;
-    width: 50%;
+    width: 100%;
+    max-width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 450px;
+    height: auto;
 }
 
 
@@ -62,10 +63,9 @@
     position: relative;
     z-index: 2;
     border-radius: 50%;
-    width: 280px !important;
-    height: 280px !important;
+    width: 100%;
+    height: auto;
     object-fit: cover;
-    background-color: #EACCF8;
     padding: 10px;
 }
 

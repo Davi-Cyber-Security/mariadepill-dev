@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from '../styles/Testimonials/Testimonials.module.css';
 import Imagem3 from '../../../public/imagem3.png';
 import BlobMenor from '../../../public/BlocoImg/blob.svg';
-import BlobMariaDepill from '../../../public/BlocoImg/blobMariaDepill1.svg';
+import BlobMariaDepill from '../../../public/BlocoImg/blobMariaDepill1.png';
 import { useState, useEffect } from "react";
 
 export default function Testimonials(){
@@ -24,13 +24,9 @@ export default function Testimonials(){
                         <div className="elfsight-app-fa5b312d-c040-4342-86ed-8676356dc967" data-elfsight-app-lazy>
                         </div>
                     </div>
-                    
-                    <div className={styles['paleta-decoration']}>
-                        <Image className={styles.mariaDepill} src={Imagem3} alt="Blob maior"/>
+                </div>
+                <div className={styles['paleta-decoration']}>
                         <Image className={styles.blobMaior} src={BlobMariaDepill} alt="Blob maior"/>
-                    </div>
-
-                    
                 </div>
             </div>
         </div>

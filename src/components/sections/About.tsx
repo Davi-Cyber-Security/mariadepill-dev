@@ -16,8 +16,6 @@ export default function  About(){
             </div>
 
             <div className={styles.imagemContainer}>
-                <div className={styles.blobRoxo}></div>
-                <div className= {styles.blobRosaClaro}></div>
                 <Image src={segundaImagem} alt="Imagem da cera de depilação" className={styles.imagem}/>
             </div>
         </div>
