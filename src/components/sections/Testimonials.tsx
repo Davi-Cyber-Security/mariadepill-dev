@@ -21,7 +21,7 @@ export default function Testimonials(){
                         <div className={styles.removeContainer}></div>
                         {/* <!-- Elfsight Google Reviews | Untitled Google Reviews --> */}
                         <script src="https://elfsightcdn.com/platform.js" async></script>
-                        <div className="elfsight-app-fa5b312d-c040-4342-86ed-8676356dc967" data-elfsight-app-lazy>
+                        <div className={`elfsight-app-fa5b312d-c040-4342-86ed-8676356dc967 ${styles.containerFeedback}`} data-elfsight-app-lazy>
                         </div>
                     </div>
                 </div>

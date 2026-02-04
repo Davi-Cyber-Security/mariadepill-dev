@@ -1,4 +1,5 @@
 "use client";
+import style from "../styles/Footer/footer.module.css";
 
 export default function Footer(){
     return (
@@ -8,7 +9,7 @@ export default function Footer(){
                     MARIADEPILL
                 </h1>
             </div>
-            <div className="py-6">
+            <div className={`${style.containerFooter} py-6`}>
                 <p className="text-[#8E8E8E] text-sm md:text-base font-lato text-center px-4">
                     © 2024 Maria Depill. Todos os direitos reservados. | Política de Privacidade
                 </p>

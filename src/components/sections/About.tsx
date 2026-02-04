@@ -8,8 +8,8 @@ export default function  About(){
     return (
         <div className={styles.container}> 
             <div className={styles.containerAbout}>
-                <h2 className="text-4xl titulo-txt-rosa">Resultados duradouros e uma experiência inesquecivel</h2>
-                <p className="txt-rosa">Comprometimento com a excelência e um atendimento de qualidade superior.</p>
+                <h2 className={`${styles.tituloAbout} text-4xl titulo-txt-rosa`}>Resultados duradouros e uma experiência inesquecivel</h2>
+                <p className={`${styles.txtRosa} txt-rosa`}>Comprometimento com a excelência e um atendimento de qualidade superior.</p>
                 <a href={"#linkwhatsapp"} className={`${styles.botaoWhats} background-rosa-claro txt-white btn`}>
                     Mande uma mensagem
                 </a>

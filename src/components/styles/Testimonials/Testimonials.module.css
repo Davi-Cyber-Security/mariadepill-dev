@@ -89,3 +89,36 @@
     height: auto;
     max-height: 300px;
 }
+
+@media screen and (max-width: 972px){
+    .blobMaior{
+        width: 80%;
+    }
+    .paleta-decoration{
+        position: absolute;
+        left: 50%;
+        top: -10%;
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 428px){
+    .containerFeedback{
+        width: 100%;
+        max-width: 200px !important;
+    }
+    .blobMaior{
+        width: 80%;
+    }
+    .paleta-decoration{
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        max-height: 300px;
+    }
+}

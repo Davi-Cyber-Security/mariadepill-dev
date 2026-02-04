@@ -2,7 +2,6 @@
     justify-content: space-around;
 }
 
-/* Grid and element-specific styles */
 .heroGrid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -25,11 +24,18 @@
     justify-self: end;
 }
 
+@media screen and (min-width: 768px){
+    .heroSection{
+        margin-top: 32px;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .heroSection{
         font-size: 14px;
         padding-left: 1rem;
         padding-right: 1rem;
+        margin-top: 10px;
     }
 
     /* keep side-by-side but tighter columns to avoid break */
@@ -44,7 +50,7 @@
 
     .heroButton{
         padding: 0.6rem 0.9rem;
-        font-size: 0.95rem;
+        font-size: 12px;
     }
 
     .heroImage{

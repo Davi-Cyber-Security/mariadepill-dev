@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { PlusCircle } from "@deemlol/next-icons";
 import { IoMdRemoveCircleOutline } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -24,6 +24,57 @@ export default function TreatmentMenu(){
     const [verDetalhes, setVerDetalhes] = useState(false);
     const [selecionadoBoolean, setSelecionadoBoolean] = useState(false);
     const [selecionado, setSelecionado] = useState('');
+
+    // refs and measured heights for smooth open/close animation
+    const cabecaRef = useRef<HTMLDivElement | null>(null);
+    const troncoRef = useRef<HTMLDivElement | null>(null);
+    const quadrilRef = useRef<HTMLDivElement | null>(null);
+    const bracoRef = useRef<HTMLDivElement | null>(null);
+    const pernaRef = useRef<HTMLDivElement | null>(null);
+
+    const [cabecaHeight, setCabecaHeight] = useState('0px');
+    const [troncoHeight, setTroncoHeight] = useState('0px');
+    const [quadrilHeight, setQuadrilHeight] = useState('0px');
+    const [bracoHeight, setBracoHeight] = useState('0px');
+    const [pernaHeight, setPernaHeight] = useState('0px');
+
+    useEffect(() => {
+        // When a section opens, measure its scrollHeight and set max-height accordingly.
+        if (openSection === 'cabeca') {
+            const el = cabecaRef.current;
+            if (el) setCabecaHeight(`${el.scrollHeight}px`);
+        } else {
+            setCabecaHeight('0px');
+        }
+
+        if (openSection === 'tronco') {
+            const el = troncoRef.current;
+            if (el) setTroncoHeight(`${el.scrollHeight}px`);
+        } else {
+            setTroncoHeight('0px');
+        }
+
+        if (openSection === 'quadril') {
+            const el = quadrilRef.current;
+            if (el) setQuadrilHeight(`${el.scrollHeight}px`);
+        } else {
+            setQuadrilHeight('0px');
+        }
+
+        if (openSection === 'braco') {
+            const el = bracoRef.current;
+            if (el) setBracoHeight(`${el.scrollHeight}px`);
+        } else {
+            setBracoHeight('0px');
+        }
+
+        if (openSection === 'perna') {
+            const el = pernaRef.current;
+            if (el) setPernaHeight(`${el.scrollHeight}px`);
+        } else {
+            setPernaHeight('0px');
+        }
+    }, [openSection]);
 
     function toggleSection(section: string) {
         if (animating) return;
@@ -72,9 +123,10 @@ export default function TreatmentMenu(){
                     </div>
                 </div>
                 <div
+                    ref={cabecaRef}
                     className={styles.cardsContainer}
                     style={{
-                        maxHeight: openSection === 'cabeca' ? '1000px' : '0px',
+                        maxHeight: cabecaHeight,
                         transition: `max-height ${animationDuration}ms ease`,
                         overflow: 'hidden',
                     }}
@@ -102,9 +154,10 @@ export default function TreatmentMenu(){
                     </div>
                 </div>
                 <div
+                    ref={troncoRef}
                     className={styles.cardsContainer}
                     style={{
-                        maxHeight: openSection === 'tronco' ? '800px' : '0px',
+                        maxHeight: troncoHeight,
                         transition: `max-height ${animationDuration}ms ease`,
                         overflow: 'hidden',
                     }}
@@ -132,9 +185,10 @@ export default function TreatmentMenu(){
                     </div>
                 </div>
                 <div
+                    ref={quadrilRef}
                     className={styles.cardsContainer}
                     style={{
-                        maxHeight: openSection === 'quadril' ? '100%' : '0px',
+                        maxHeight: quadrilHeight,
                         transition: `max-height ${animationDuration}ms ease`,
                         overflow: 'hidden',
                     }}
@@ -162,9 +216,10 @@ export default function TreatmentMenu(){
                     </div>
                 </div>
                 <div
+                    ref={bracoRef}
                     className={styles.cardsContainer}
                     style={{
-                        maxHeight: openSection === 'braco' ? '800px' : '0px',
+                        maxHeight: bracoHeight,
                         transition: `max-height ${animationDuration}ms ease`,
                         overflow: 'hidden',
                     }}
@@ -192,9 +247,10 @@ export default function TreatmentMenu(){
                     </div>
                 </div>
                 <div
+                    ref={pernaRef}
                     className={styles.cardsContainer}
                     style={{
-                        maxHeight: openSection === 'perna' ? '800px' : '0px',
+                        maxHeight: pernaHeight,
                         transition: `max-height ${animationDuration}ms ease`,
                         overflow: 'hidden',
                     }}
