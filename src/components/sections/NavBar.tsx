@@ -25,7 +25,7 @@ export default function NavBar() {
 
   return (
     <nav className={`${styles.navBar} fixed top-2 inset-x-0 flex justify-center px-2`}>
-      {/* Desktop (exatamente como pediu): mostra logo, links e botão completo */}
+      
       <div className={`${styles.navContent} w-full flex items-center justify-between bg-offwhite shadow-lg rounded-2xl`}>
         
         <Image className={`${styles.logo} flex background-rosa-escuro m-1 rounded-full w-18 h-18`} src={Logo} alt="Logo" />
@@ -47,7 +47,7 @@ export default function NavBar() {
           </Link>
           <BiAdjust 
             aria-label="Alternar modo de cor"
-            style={alterarModoParaRoxo ? { color: '#463E70' } : { color: '#AA6BC8' }} className={`${styles.botao} botaoModo`} 
+            style={alterarModoParaRoxo ? { color: '#9583f1' } : { color: '#AA6BC8' }} className={`${styles.botao} botaoModo`} 
             onClick={() => setAlterarModoParaRoxo(!alterarModoParaRoxo)}
           />
         </div>
