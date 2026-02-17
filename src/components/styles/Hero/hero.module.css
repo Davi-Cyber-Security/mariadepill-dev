@@ -1,8 +1,27 @@
 .heroSection{
+    position: relative;
     justify-content: space-around;
+    isolation: isolate;
+}
+
+.heroSection::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(270deg, #FFFFFF 36%, #AA6BC8 86%);
+    opacity: 0.44;
+    pointer-events: none;
+}
+
+/* Quando o tema roxo estiver ativo, troca apenas a cor do ponto de 86% */
+:global([data-theme="roxo"]) .heroSection::before{
+    background: linear-gradient(270deg, #FFFFFF 36%, #9D8BFF 86%);
 }
 
 .heroGrid{
+    position: relative;
+    z-index: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -12,8 +31,8 @@
 .heroTitle{
     font-size: 2.8rem; 
     line-height: 1.05;
-    color: #AA6BC8;
-    text-shadow: 0px 0px 21px #fff;
+    color: var(--color-text-principal, #463E70);
+    font-weight: 600;
 }
 
 .heroButton{
@@ -48,11 +67,13 @@
 
     .heroTitle{
         font-size: 2rem;
+        color: #AA6BC8;
     }
 
     .heroButton{
         padding: 0.6rem 0.9rem;
         font-size: 12px;
+        background-color: #AA6BC8;
     }
 
     .heroImage{

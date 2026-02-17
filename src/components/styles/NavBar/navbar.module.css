@@ -11,9 +11,12 @@
     z-index: 1101 !important;
 }
 
-
 @media screen and (max-width: 768px) {
-    .logo{
+    .themeToggleIconCorRosa{
+        width: 50px;
+        height: 50px;
+    }
+    .themeToggleIconCorRoxo{
         width: 50px;
         height: 50px;
     }
@@ -24,6 +27,31 @@
     .botao{
         width: 100%;
         max-width: 50px;
+    }
+}
+
+.themeToggleIconDefault{
+    color: #AA6BC8;
+}
+
+.themeToggleIconRoxo{
+    color: #9583f1;
+}
+.themeCorRoxoEscuro{
+    color: #463E70;
+}
+
+.themeToggleIconCorRosa{
+    background-color: #D0A0E3;
+}
+
+.themeToggleIconCorRoxo{
+    background-color: #463E70;
+}
+
+@media screen and (max-width: 839px) {
+    .themeToggleIconRoxo{
+        color: #463E70;
     }
 }
 
@@ -44,9 +72,18 @@
         justify-content: space-between;
         width: 100%;
     }
-    .mobileDropdown{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
+.mobileDropdown{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+}
+
+.rolagemLeitura{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    z-index: 1102;
+    transition: width 0.12s ease-out, background-color 0.2s ease;
 }

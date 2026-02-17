@@ -1,5 +1,121 @@
 .card-containers {
     background-color: #FAF8FC;
-    width: 550px;
-    height: 211px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.containerCard{
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 60vh;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botaofechar{
+    position: absolute;
+    top: 7%;
+    right: 15px;
+    width: 100%;
+    max-width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #AA6BC8;
+}
+
+.descricao{
+    text-align: center;
+    font-size: 1rem;
+    color: #D0A0E3;
+}
+
+.cardContainers{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(250px, 1fr));
+    gap: 20px;
+}
+
+.beneficio{
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    background-color: #FAF8FC;
+    border-radius: 12px;
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    max-height: 250px !important;
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #611D67;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 70%;
+    max-height: 50px;
+    color: #fff;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.botao:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.iconeWhatsapp{
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 448px) {
+    .containerCard{
+        max-height: 80vh;
+    }
+    .cardContainers{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minMax(162px, 1fr));
+        gap: 20px;
+    }
+    .botao{
+        margin-top: 10px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 40px;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .botaofechar{
+        position: absolute;
+        top: 4%;
+        right: 10px;
+        width: 100%;
+        max-width: 25px;
+        height: auto;
+        cursor: pointer;
+    }
 }

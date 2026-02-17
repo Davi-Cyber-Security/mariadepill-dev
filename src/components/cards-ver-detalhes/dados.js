@@ -28,7 +28,7 @@ const dados = {
         '🍃 Pele que Respira: Reduz a oleosidade e impurezas acumuladas, proporcionando um toque aveludado e sensação de limpeza real.',
         '📉 Fios Mais Finos: Com a frequência, os pelos nascem mais fracos e discretos, tornando a manutenção cada vez mais suave.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      "https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20do%20rosto.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?"
     ),
     createTreatment(
       'Nariz',
@@ -40,7 +40,7 @@ const dados = {
         '🍃 Higiene e Bem-Estar: Ajuda a reduzir o acúmulo de sujeira e impurezas, proporcionando maior sensação de limpeza.',
         '📉 Pelos Mais Finos e Discretos: Com a manutenção regular, os pelos crescem mais fracos, finos e menos evidentes.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20do%20Nariz.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
     createTreatment(
       'Buço',
@@ -52,7 +52,7 @@ const dados = {
         '🍃 Pele Lisa e Macia: Proporciona toque macio e aparência rejuvenescida.',
         '📉 Pelos Mais Finos: Com sessões regulares, os pelos crescem mais fracos e discretos.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AQuero%20agendar%20Depila%C3%A7%C3%A3o%20do%20Bu%C3%A7o.%0AVoc%C3%AA%20tem%20hor%C3%A1rio%20dispon%C3%ADvel%20esta%20semana?'
     ),
   ],
 
@@ -67,7 +67,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Frescor: A depilação completa proporciona um visual mais limpo, leve e bem cuidado.',
         '📉 Pelos Mais Finos e Discretos: Com o tempo, os pelos tendem a crescer mais fracos, finos e menos visíveis.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20de%20Ombro.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
     createTreatment(
       'Costas',
@@ -79,7 +79,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Frescor: A depilação completa proporciona um visual mais limpo, leve e bem cuidado.',
         '🌿 Sensação de Limpeza e Conforto: A remoção completa dos pelos traz frescor, bem-estar e um visual mais cuidado.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20de%20Costas.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
     createTreatment(
       'Abdômen',
@@ -91,7 +91,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Bem-Estar: A remoção completa dos pelos proporciona um visual mais limpo, confortável e agradável.',
         '📉 Pelos Mais Finos com o Tempo: Com a depilação frequente, os pelos crescem mais fracos, finos e menos aparentes.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20de%20Abd%C3%B4men.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
   ],
 
@@ -106,7 +106,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Leveza: A remoção completa dos pelos proporciona um visual mais limpo, leve e agradável ao toque.',
         '📉 Pelos Mais Finos e Discretos: Com o tempo, os pelos crescem mais fracos, finos e menos visíveis.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20dos%20bra%C3%A7os.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
     createTreatment(
       'Antebraço',
@@ -118,7 +118,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Conforto: A remoção dos pelos proporciona um visual mais limpo, leve e agradável ao toque.',
         '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, os pelos crescem mais fracos, finos e menos aparentes.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20dos%20antebra%C3%A7os.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
     createTreatment(
       'Axilas',
@@ -130,7 +130,7 @@ const dados = {
         '🌿 Higiene e Frescor: Reduz odor e proporciona sensação de limpeza prolongada.',
         '📉 Pelos Mais Finos: Com manutenção regular, pelos crescem mais fracos e discretos.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20das%20axilas.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
     createTreatment(
       'Ombro ao Dedinho da Mão',
@@ -142,7 +142,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Leveza: Remoção total traz conforto, frescor e visual mais limpo e elegante.',
         '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, pelos crescem mais fracos, finos e menos aparentes em toda a região.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20do%20ombro%20ao%20dedinho%20da%20m%C3%A3o.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
     createTreatment(
       'Dedinho da Mão',
@@ -154,7 +154,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Cuidado: Remoção valoriza estética das mãos, trazendo visual mais delicado e bem cuidado.',
         '📉 Pelos Mais Finos e Discretos: Com o tempo, pelos crescem mais fracos, finos e quase imperceptíveis.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20do%20dedinho%20da%20m%C3%A3o.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
   ],
 
@@ -169,7 +169,7 @@ const dados = {
         '🌿 Sensação de Frescor e Conforto: Remoção proporciona leveza, higiene e sensação prolongada de bem-estar.',
         '📉 Pelos Mais Finos com o Tempo: Com depilação regular, pelos crescem mais fracos, finos e menos aparentes.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20de%20Virilha.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
     createTreatment(
       'Glúteos',
@@ -181,7 +181,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Conforto: Remoção proporciona frescor, higiene e bem-estar prolongado.',
         '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, pelos crescem mais fracos, finos e menos aparentes.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20do%20Gl%C3%BAteos.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
   ],
 
@@ -196,7 +196,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Frescor: Remoção proporciona leveza, conforto e visual mais limpo e bem cuidado.',
         '📉 Pelos Mais Finos com o Tempo: Com depilação regular, pelos crescem mais fracos, finos e menos aparentes.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20meia%20perna.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
     createTreatment(
       'Perna Toda',
@@ -208,7 +208,7 @@ const dados = {
         '🌿 Sensação de Limpeza e Conforto: Remoção proporciona conforto, leveza e visual mais limpo.',
         '📉 Pelos Mais Finos com o Tempo: Com sessões regulares, pelos crescem mais fracos, finos e menos aparentes.',
       ],
-      'https://www.instagram.com/reel/CwX1Yp8M3Y5/?utm_source=ig_web_copy_link'
+      'https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20Depila%C3%A7%C3%A3o%20perna%20toda.%0APode%20me%20informar%20os%20hor%C3%A1rios%20dispon%C3%ADveis?'
     ),
   ],
 };

@@ -120,11 +120,18 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
   * {
     @apply border-border outline-ring/50;
+    transition: color 0.28s ease, background-color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
   }
   body {
     @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 }
 
@@ -136,7 +143,7 @@ footer{
   color: #D0A0E3;
 }
 .titulo-txt-rosa {
-  color: #FF24BD;
+  color: #AA6BC8;
 }
 .titulo-txt {
   color: #463E70;

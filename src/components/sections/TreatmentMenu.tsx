@@ -12,11 +12,13 @@ import imgQuadril from '../../../public/quadril.png';
 import imgBracos from '../../../public/bracos.png';
 import imgPernas from '../../../public/pernas.png';
 import IconeWhatsapp from '../../../public/icone-whatsapp.png';
+
 import Card from '../cards-ver-detalhes/Card';
 import dados from '../Sessao-Servicos/dados'
-
+import { useTheme } from "@/src/contexts/ThemeContext";
 
 export default function TreatmentMenu(){
+    const { isRoxoTheme } = useTheme();
     const [openSection, setOpenSection] = useState<string | null>(null);
     const [animating, setAnimating] = useState(false);
     const animationDuration = 300; // ms
@@ -102,15 +104,20 @@ export default function TreatmentMenu(){
 
     return (
         <div className={`${styles.treatmentMenuContainer} container-general`}>
-            <p className="txt-rosa">Nosso</p>
-            <h2 className="titulo-txt-rosa">Menu de Tratamentos</h2>
-            <div className="card-container-blur">
-                {verDetalhes && selecionadoBoolean ? (
-                    <Card info={selecionado} />
-                ) : (
-                    <div></div>
-                )}
-            </div>
+            <p className={`${styles.txtRosa} txt-rosa`} style={isRoxoTheme ? { color: "#A59DD4" } : undefined}>Nosso</p>
+            <h2 className={`${styles.tituloTxtRosa} titulo-txt-rosa`} style={isRoxoTheme ? { color: "#463E70" } : undefined}>Menu de Tratamentos</h2>
+            
+            {verDetalhes && selecionadoBoolean && (
+                <div className={styles.cardContainerBlur}>
+                    <Card
+                        info={selecionado}
+                        onClose={() => {
+                            setVerDetalhes(false);
+                            setSelecionadoBoolean(false);
+                        }}
+                    />
+                </div>
+            )}
 
             <div className={styles.sectionContainer}>
                 <div className={styles.headerContainer}>
@@ -118,7 +125,7 @@ export default function TreatmentMenu(){
                         <p>Cabeça</p>
                         <Image src={ImgCabeca} alt='Icone Cabeça' className={styles.icone}/>
                     </div>
-                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('cabeca')}>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} style={isRoxoTheme ? { backgroundColor: "#463E70" } : undefined} onClick={() => toggleSection('cabeca')}>
                         {openSection === 'cabeca' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle color="#FFFFFF" /> </div>}
                     </div>
                 </div>
@@ -132,11 +139,11 @@ export default function TreatmentMenu(){
                     }}
                 >
                     {dados.cabeca?.map((item: any, idx: number) => (
-                        <div className='sessao-card' key={idx}>
+                        <div className={`sessao-card ${styles.cardContainer}`} key={idx}>
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
-                            <h3>{item.titulo}</h3>
+                            <h3 style={isRoxoTheme ? { color: "#463E70" } : undefined}>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`} style={isRoxoTheme ? { backgroundColor: "#463E70", color: "#FFFFFF" } : undefined}>Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
@@ -149,7 +156,7 @@ export default function TreatmentMenu(){
                         <p>Tronco</p>
                         <Image src={ImgTronco} alt='Icone do Tronco' className={styles.icone}/>
                     </div>
-                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('tronco')}>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} style={isRoxoTheme ? { backgroundColor: "#463E70" } : undefined} onClick={() => toggleSection('tronco')}>
                         {openSection === 'tronco' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle color="#FFFFFF" /> </div>}
                     </div>
                 </div>
@@ -163,11 +170,11 @@ export default function TreatmentMenu(){
                     }}
                 >
                     {dados.tronco?.map((item: any, idx: number) => (
-                        <div className='sessao-card' key={idx}>
+                        <div className={`sessao-card ${styles.cardContainer}`} key={idx}>
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
-                            <h3>{item.titulo}</h3>
+                            <h3 style={isRoxoTheme ? { color: "#463E70" } : undefined}>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`} style={isRoxoTheme ? { backgroundColor: "#463E70", color: "#FFFFFF" } : undefined}>Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
@@ -180,7 +187,7 @@ export default function TreatmentMenu(){
                         <p>Quadril</p>
                         <Image src={imgQuadril} alt='Icone do Quadril' className={styles.icone}/>
                     </div>
-                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('quadril')}>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} style={isRoxoTheme ? { backgroundColor: "#463E70" } : undefined} onClick={() => toggleSection('quadril')}>
                         {openSection === 'quadril' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </div>}
                     </div>
                 </div>
@@ -194,11 +201,11 @@ export default function TreatmentMenu(){
                     }}
                 >
                     {dados.quadril?.map((item: any, idx: number) => (
-                        <div className='sessao-card' key={idx}>
+                        <div className={`sessao-card ${styles.cardContainer}`} key={idx}>
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
-                            <h3>{item.titulo}</h3>
+                            <h3 style={isRoxoTheme ? { color: "#463E70" } : undefined}>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`} style={isRoxoTheme ? { backgroundColor: "#463E70", color: "#FFFFFF" } : undefined}>Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
@@ -211,7 +218,7 @@ export default function TreatmentMenu(){
                         <p>Braços</p>
                         <Image src={imgBracos} alt='Icone dos Braços' className={styles.icone}/>
                     </div>
-                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('braco')}>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} style={isRoxoTheme ? { backgroundColor: "#463E70" } : undefined} onClick={() => toggleSection('braco')}>
                         {openSection === 'braco' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </div>}
                     </div>
                 </div>
@@ -225,11 +232,11 @@ export default function TreatmentMenu(){
                     }}
                 >
                     {dados.braco?.map((item: any, idx: number) => (
-                        <div className='sessao-card' key={idx}>
+                        <div className={`sessao-card ${styles.cardContainer}`} key={idx}>
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
-                            <h3>{item.titulo}</h3>
+                            <h3 style={isRoxoTheme ? { color: "#463E70" } : undefined}>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`} style={isRoxoTheme ? { backgroundColor: "#463E70", color: "#FFFFFF" } : undefined}>Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
@@ -242,7 +249,7 @@ export default function TreatmentMenu(){
                         <p>Pernas</p>
                         <Image src={imgPernas} alt='Icone das Pernas' className={styles.icone}/>
                     </div>
-                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} onClick={() => toggleSection('perna')}>
+                    <div className={`${styles.containerBotaoVerDetalhes} background-rosa-claro`} style={isRoxoTheme ? { backgroundColor: "#463E70" } : undefined} onClick={() => toggleSection('perna')}>
                         {openSection === 'perna' ? <div className={styles.botaoVerDetalhes}> <span>Fechar</span> <IoMdRemoveCircleOutline size={24}/></div> : <div className={styles.botaoVerDetalhes}><span>Abrir</span> <PlusCircle size={24} color="#FFFFFF" /> </div>}
                     </div>
                 </div>
@@ -256,21 +263,21 @@ export default function TreatmentMenu(){
                     }}
                 >
                     {dados.perna?.map((item: any, idx: number) => (
-                        <div className='sessao-card' key={idx}>
+                        <div className={`sessao-card ${styles.cardContainer}`} key={idx}>
                             <Image src={item.imagem} alt={item.titulo} className={styles.iconeCard}/>
-                            <h3>{item.titulo}</h3>
+                            <h3 style={isRoxoTheme ? { color: "#463E70" } : undefined}>{item.titulo}</h3>
                             <div className={styles.botaoVerDetalhesCard}>
-                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`}>Ver Detalhes <FaArrowRightLong /></button>
+                                <button onClick={() => {setVerDetalhes(true); setSelecionado(item.titulo); setSelecionadoBoolean(true);}} className={`${styles.botaoFlex}`} style={isRoxoTheme ? { backgroundColor: "#463E70", color: "#FFFFFF" } : undefined} >Ver Detalhes <FaArrowRightLong /></button>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
 
-            <Link href={"#linkWhatsapp"} className={`${styles.iconeWhatsapp} sem-line background-rosa-claro txt-white`}>
+            <a href={"https://wa.me/5562981841110?text=Ol%C3%A1,%20Maria!%20%F0%9F%A9%B7%0AVim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20minha%20depila%C3%A7%C3%A3o.%0APoderia%20me%20informar%20a%20disponibilidade?%0A%0A%C3%81reas%20desejadas:%20%5Bdescrever%20aqui%5D"} className={`${styles.iconeWhatsapp} sem-line background-rosa-claro txt-white`} style={isRoxoTheme ? { backgroundColor: "#463E70" } : undefined}>
             <Image src={IconeWhatsapp} alt="Icone do Whatsapp" className={styles.icone}/>
               Agende agora
-            </Link>
+            </a>
         </div>
     )
 } 

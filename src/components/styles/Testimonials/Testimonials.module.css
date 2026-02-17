@@ -67,7 +67,7 @@
 
 .blobMenor{
     width: 100%;
-    max-width: 200px;
+    max-width: 200px !important;
     height: auto;
     position: absolute;
     top: -10%;
@@ -90,6 +90,133 @@
     max-height: 300px;
 }
 
+.sliderWrapper {
+    width: 431px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+
+  .sliderViewport {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+  
+
+  .sliderCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    padding: 28px 24px 24px;
+    width: 100%;
+    max-width: 531px;
+    min-height: 260px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .sliderCard:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.13);
+  }
+  
+
+  .sliderStars {
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+  }
+  
+
+  .sliderReviewText {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #3c4043;
+    text-align: center;
+    flex: 1;
+  }
+  
+
+  .sliderNoText {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #9aa0a6;
+    text-align: center;
+    font-style: italic;
+    flex: 1;
+  }
+  
+
+  .sliderAvatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  
+
+  .sliderName {
+    font-weight: 600;
+    font-size: 14px;
+    color: #202124;
+  }
+  
+
+  .sliderTime {
+    font-size: 12px;
+    color: #70757a;
+    margin-top: -8px;
+  }
+  
+
+  .sliderDots {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+  
+
+  .sliderDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #dadce0;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    flex-shrink: 0;
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+  
+  .sliderDot:hover {
+    background: #bdbdbd;
+  }
+  
+
+  .sliderDotActive {
+    background: #4285f4;
+    transform: scale(1.25);
+  }
+  
+
 @media screen and (max-width: 972px){
     .blobMaior{
         width: 80%;
@@ -109,8 +236,19 @@
         width: 100%;
         max-width: 200px !important;
     }
+    .sliderViewport{
+        max-width: 200px !important;
+    }
     .blobMaior{
         width: 80%;
+    }
+    .blobMenor{
+        width: 100%;
+        max-width: 200px !important;
+        height: auto;
+        position: absolute;
+        top: -10%;
+        left: -20%;
     }
     .paleta-decoration{
         position: absolute;

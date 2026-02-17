@@ -3,6 +3,24 @@
     padding: 10px;
 }
 
+.cardContainerBlur{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100000;
+    overflow-y: auto;
+}
+
 .sectionContainer {
     display: flex;
     flex-direction: column;
@@ -144,7 +162,7 @@
 }
 
 .botaoVerDetalhesCard button {
-    background-color: #611D67;
+    background-color: #D0A0E3;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -187,6 +205,49 @@
 .icone{
     width: 24px;
     height: 24px;
+}
+
+@media (min-width: 769px){
+    :global(.sessao-card) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+        flex: 0 0 calc(33.333% - 20px);
+        box-sizing: border-box;
+        min-width: 200px;
+        font-size: 1.5rem;
+    }
+    .txtRosa{
+        font-size: 1rem;
+    }
+    .tituloTxtRosa{
+        font-size: 1.5rem;
+    }
+    .botaoVerDetalhesCard button {
+        font-size: 13px;
+    }
+    .iconeCard {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .icone{
+        width: 40px;
+        height: 40px;
+    }
+    .iconeWhatsapp{
+        width: 210px;
+        height: 50px;
+        font-size: 1.5rem;
+        align-items: center;
+    }
+    .containerOpcaoStyles{
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
