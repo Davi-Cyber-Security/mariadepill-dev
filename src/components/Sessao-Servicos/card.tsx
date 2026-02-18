@@ -3,17 +3,19 @@ import { useState } from 'react';
 import dados from '../Sessao-Servicos/dados';
 import Image from 'next/image';
 
-export default function CardServicos() {
-    const [detalhe, setDetalhe] = useState(null);
+type Categoria = keyof typeof dados;
 
-    function handleVerDetalhes(categoria){
+export default function CardServicos() {
+    const [detalhe, setDetalhe] = useState<Categoria | null>(null);
+
+    function handleVerDetalhes(categoria: Categoria) {
         setDetalhe(categoria);
         return detalhe;
     }
 
     return (
         <div className='container-box'>
-            <H
+            {/* TODO: implementar listagem de serviços */}
         </div>
     )
 }
