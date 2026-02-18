@@ -28,7 +28,7 @@ export default function Card({ info, onClose }: CardProps) {
         const buscarDados = () => {
             
             for (const categoria in dados) {
-                const tratamentos = dados[categoria];
+                const tratamentos = dados[categoria as keyof typeof dados];
 
                 const tratamento = tratamentos.find(
                     (t: any) => t.name === info
